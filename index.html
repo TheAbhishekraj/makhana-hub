@@ -140,7 +140,41 @@
   <p style="margin-top:6px;opacity:.5;font-size:.75rem;">For institutional and banking presentation only. All figures based on ICAR field-trial data and government market price records.</p>
 </footer>
 
+<!-- AGRI-AI CHATBOT WIDGET -->
+<div class="chatbot-widget" id="chatbot-widget">
+  <button class="chatbot-trigger" id="chatbot-trigger" title="Ask Swarna Vaidehi AI Advisor">
+    <span>💬</span>
+    <span class="trigger-text">AI Advisor</span>
+  </button>
+  <div class="chatbot-window" id="chatbot-window">
+    <div class="chatbot-header">
+      <div class="cb-avatar">🌿</div>
+      <div>
+        <div class="cb-name">Swarna Vaidehi AI Advisor</div>
+        <div class="cb-status">ICAR-NRC Makhana Expert Agent</div>
+      </div>
+      <button class="cb-close" id="cb-close">&times;</button>
+    </div>
+    <div class="chatbot-messages" id="chatbot-messages">
+      <div class="cb-msg bot">
+        Hello! I am your Swarna Vaidehi Agri-AI Advisor. Ask me anything about Euryale ferox nursery setups, shallow field depths, biological pest management, Year 1 financials, automated machinery CAPEX, or IFS co-culture returns.
+      </div>
+      <div class="cb-suggestions">
+        <button class="cb-chip" onclick="askChatbot('What is the Year 1 net profit?')">📊 Year 1 Profits?</button>
+        <button class="cb-chip" onclick="askChatbot('Explain the Swarna Vaidehi seed rate')">🌱 Seed Rate?</button>
+        <button class="cb-chip" onclick="askChatbot('Show automated machinery CAPEX')">⚙️ Machinery CAPEX?</button>
+        <button class="cb-chip" onclick="askChatbot('How does the IFS co-culture work?')">🐟 Fish co-culture IFS?</button>
+      </div>
+    </div>
+    <div class="chatbot-input-area">
+      <input type="text" id="chatbot-input" placeholder="Ask a question..." onkeydown="if(event.key === 'Enter') submitChatQuery()"/>
+      <button id="chatbot-send" onclick="submitChatQuery()">➔</button>
+    </div>
+  </div>
+</div>
+
 <script src="data.js"></script>
 <script src="render.js"></script>
+<script src="chatbot.js"></script>
 </body>
 </html>
